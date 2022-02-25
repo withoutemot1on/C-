@@ -13,11 +13,11 @@ namespace SMO
             double lambda, tobs, mu, ro, s, ndet, Po;
             Console.WriteLine("Введите число каналов СМО N: ");
             int N = int.Parse(Console.ReadLine());
-            ndet = 24;
-            lambda = ndet / 60;
-            tobs = 5;
-            mu = 1 / tobs;
-            ro = lambda / mu;
+            ndet = 24;          //среднее число деталей в час
+            lambda = ndet / 60; //среднее число деталей в минуту
+            tobs = 5;           //время обслуживания в минутах
+            mu = 1 / tobs;      //среднее число заявок в минуту
+            ro = lambda / mu;   //интенсивность нагрузки
             s = 0;
             for (int i = 0; i <= N; i++) s += Math.Pow(ro, i) / F(i);
             Po = 1 / s;
