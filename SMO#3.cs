@@ -13,7 +13,7 @@ namespace SMO3
             double lambda, tobs, mu, ro, s, trab, Po;
             Console.WriteLine("Введите число каналов СМО N: ");
             int M = int.Parse(Console.ReadLine());
-            int N = 3;          //число 
+            int N = 3;          //число фасовщиков
             lambda = 6;         //интенсивность прибытия автомобилей aвт./день
             tobs = 4;           //время обслуживания автомобиля в часах
             trab = 12;          //продолжительность рабочего дня в часах
